@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 8,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": [
+        "custom/arch",
+        "custom/ethernet",
+        "custom/vpn"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/target",
+        "clock"   
+    ],
+
+    // --- Módulos Izquierda ---
+
+    "custom/arch": {
+        "format": "  ",
+        "tooltip": false
+    },
+
+    "custom/ethernet": {
+        "exec": "~/.config/waybar/scripts/ethernet.sh",
+        "interval": 2,
+        "return-type": "json",
+        "format": "{text}"
+    },
+
+    "custom/vpn": {
+        "exec": "~/.config/waybar/scripts/vpn.sh",
+        "interval": 2,
+        "return-type": "json",
+        "format": "{text}"
+    },
+
+    // --- Módulo Central ---
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+        "active": "󰮯",     
+        "occupied": "󰊠",   
+        "default": "",    
+        "persistent": ""  
+},
+        "persistent-workspaces": {
+            "*": 5 
+        }
+    },   
+
+    // --- Módulos Derecha ---
+
+    "custom/target": {
+        "exec": "~/.config/waybar/scripts/target.sh",
+        "interval": 1,
+        "return-type": "json",
+        "format": "{text}"
+    },
+
+    "clock": {
+        "format": "  {:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    }
+
+}
+

@@ -1,0 +1,76 @@
+ * {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* --- ESTILO BASE PARA TODAS LAS PÍLDORAS --- */
+#custom-arch,
+#custom-ethernet, 
+#custom-vpn, 
+#custom-target,
+#custom-backlight-slider,
+#pulseaudio-slider,
+#clock {
+    background: #1e1e2e;
+    color: #ffffff;
+    padding: 0 15px;
+    margin: 4px 4px; /* Añadido margen vertical para que no toque el borde */
+    border-radius: 10px;
+}
+
+/* --- LADO IZQUIERDO --- */
+#custom-arch {
+    color: #1793d1;
+    border-bottom: 3px solid #1793d1;
+    padding-right: 18px;
+}
+
+#custom-ethernet { 
+    border-bottom: 3px solid #2495e7; 
+}
+
+#custom-vpn { 
+    border-bottom: 3px solid #1bbf3e; 
+}
+
+/* --- CENTRO: WORKSPACES --- */
+#workspaces {
+    background: #1e1e2e;
+    margin: 0 5px;
+    padding: 0 5px;
+    border-radius: 10px;
+    border-bottom: 3px solid #89b4fa;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: #585b70;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+}
+
+#workspaces button.occupied,
+#workspaces button.visible {
+    color: #fab387;
+}
+
+/* --- LADO DERECHO (ORDENADO) --- */
+
+#custom-target {
+    border-bottom: 3px solid #e51d0b;
+    font-weight: bold;
+}
+
+#clock {
+    border-bottom: 3px solid #cba6f7;
+    color: #cba6f7;
+}
